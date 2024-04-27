@@ -16,4 +16,8 @@ public class Student {
     public int getMatrikelNummer() {
         return matrikelNummer;
     }
+
+    public void registerCourse(Course course) {
+        course.registerStudent(Student.this);
+    }
 }
