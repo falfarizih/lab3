@@ -7,10 +7,9 @@ public class Course {
 
     ArrayList<Student> registeredStudents = new ArrayList<>();
 
-    public Course(String courseName, int capacity, int attendence){
+    public Course(String courseName, int capacity){
         this.courseName= courseName;
         this.capacity = capacity;
-        this.attendence = attendence;
     }
 
     public String getCourseName(){
@@ -26,9 +25,21 @@ public class Course {
     }
 
     public void registerStudent(Student student){
-
         registeredStudents.add(student);
-
     }
 
+    public Student getRegisteredStudent(int index){
+        return registeredStudents.get(index);
+    }
+
+    public ArrayList<Student> getRegisteredStudentArray(){
+        return registeredStudents;
+    }
+
+
+    public void printRegisteredStudents(){
+        for(Student student : registeredStudents){
+            System.out.println(student);
+        }
+    }
 }
