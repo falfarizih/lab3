@@ -4,7 +4,7 @@ public class Main {
         System.out.println("Kartik is a hero");
         System.out.println("my Father is my hero");
         System.out.println("Dream Team");
-        
+        System.out.println("Today is a good day");
 
     }
 }
