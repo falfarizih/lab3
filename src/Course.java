@@ -12,6 +12,7 @@ public class Course {
         this.capacity = capacity;
     }
 
+
     public String getCourseName(){
         return courseName;
     }
@@ -26,6 +27,10 @@ public class Course {
 
     public void registerStudent(Student student){
         registeredStudents.add(student);
+    }
+
+    public void addCourseToTheList(Enrolment enrolment){
+        enrolment.addCourse(Course.this);
     }
 
     public Student getRegisteredStudent(int index){
