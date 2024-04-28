@@ -3,13 +3,14 @@ import java.util.ArrayList;
 public class Course {
     private String courseName;
     private int capacity;
-    private int attendence;
+    private int amountOfStudents;
 
     ArrayList<Student> registeredStudents = new ArrayList<>();
 
     public Course(String courseName, int capacity){
         this.courseName= courseName;
         this.capacity = capacity;
+        amountOfStudents = 0;
     }
 
 
@@ -21,16 +22,21 @@ public class Course {
         return capacity;
     }
 
-    public int getAttendence(){
-        return attendence;
+    public int getAmountOfStudents(){
+        return amountOfStudents;
+    }
+
+    public void printAmountOfStudents(){
+        System.out.println(amountOfStudents);
     }
 
     public void registerStudent(Student student){
-        registeredStudents.add(student);
+            registeredStudents.add(student);
+            amountOfStudents += 1;
     }
 
-    public void addCourseToTheList(Enrolment enrolment){
-        enrolment.addCourse(Course.this);
+    public void addCourseToTheList(Administration administration){
+        administration.addCourse(Course.this);
     }
 
     public Student getRegisteredStudent(int index){

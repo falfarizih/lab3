@@ -1,22 +1,35 @@
 public class Main {
     public static void main(String[] args) {
-        Enrolment enrolment = new Enrolment();
+        Administration administration = new Administration();
 
-        Course course1= new Course("Info-1", 4000);
-        Course course2= new Course("GDM", 3000);
-        Course course3= new Course("GWP", 100);
+        Student student1 = new Student(001, "Kartik");
+        Student student2 = new Student(002, "Kartik1");
+        Student student3 = new Student(003, "Kartik2");
+        Student student4 = new Student(004, "Kartik3");
+        Student student5 = new Student(005, "Kartik4");
 
 
-        course1.addCourseToTheList(enrolment);
-        course2.addCourseToTheList(enrolment);
-        course3.addCourseToTheList(enrolment);
 
-        enrolment.printAllCourses();
+        Course course1= new Course("Info-1", 2);
+        Course course2= new Course("GDM", 3);
+        Course course3= new Course("GWP", 3);
 
-        enrolment.getCapacityOfACourse(2);
-        enrolment.getNameOfACourse(2);
+        student1.registerCourse(course1);
+        student2.registerCourse(course1);
+        student3.registerCourse(course1);
 
-        System.out.println(enrolment.getNameOfACourse(2));
+        course1.addCourseToTheList(administration);
+        course2.addCourseToTheList(administration);
+        course3.addCourseToTheList(administration);
+
+
+        administration.printAllCourses();
+        administration.checkAmountOfStudentInACourse(0);
+
+        administration.getCapacityOfACourse(2);
+        administration.getNameOfACourse(2);
+
+        System.out.println(administration.getNameOfACourse(2));
     }
 
 
