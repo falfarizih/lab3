@@ -22,6 +22,13 @@ public class Main {
         course2.addCourseToTheList(administration);
         course3.addCourseToTheList(administration);
 
+        Grade grade1= new Grade(2,012345, "info-1");
+        Grade grade2= new Grade(5,01357, "GDM");
+
+        grade1.printMarks();
+        grade2.printMarks();
+
+
 
         administration.printAllCourses();
         administration.checkAmountOfStudentInACourse(0);
