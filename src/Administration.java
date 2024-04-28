@@ -23,9 +23,6 @@ public class Administration {
         return listOfCourses.get(index).getCourseName();
     }
 
-    public void registerCourse(Course course){
-        listOfCourses.add(course);
-    }
 
     public void printAllCourses(){
        for (Course course : listOfCourses) {
